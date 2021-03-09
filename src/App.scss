@@ -1,8 +1,9 @@
 $md-screen: 426px;
 $lg-screen: 769px;
 
-.App {
+.grid-container {
   background-color: #ddd;
+  height:100vh;
   text-align: center;
   display: grid;
   gap: 20px 0px;
@@ -19,20 +20,21 @@ $lg-screen: 769px;
 
   @media (min-width: $md-screen) {
     gap:0px 0px;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas:
-      "area-quarks area-quarks area-quarks . area-force area-force area-force"
-      "area-quarks area-quarks area-quarks . area-force area-force area-force"
-      "controller controller controller area-higgs-boson . . ."
-      "area-neutrinos area-neutrinos area-neutrinos . infobox infobox infobox"
-      "area-neutrinos area-neutrinos area-neutrinos . infobox infobox infobox";
+   grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 0.66fr);
+  gap: 0px 0px;
+  grid-template-areas:
+    "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
+    "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
+    "area-charged-leptons area-charged-leptons area-charged-leptons infobox infobox"
+    "area-neutrinos area-neutrinos area-neutrinos infobox infobox";
   }
 }
-.area-quarks { grid-area: area-quarks; background-color: #c6dbda;}
-.area-force { grid-area: area-force; background-color: #fee1e8;}
+.area-quarks { grid-area: area-quarks; background-color: #bcd5e3;}
+.area-force-carrying-particles { grid-area: area-force-carrying-particles; background-color: #f7bb86;}
 .area-higgs-boson { grid-area: area-higgs-boson; background-color: #fed7c3;}
-.area-neutrinos { grid-area: area-neutrinos; background-color: #cce2cb;}
+.area-charged-leptons { grid-area: area-charged-leptons; background-color: #e3bcbf;}
+.area-neutrinos { grid-area: area-neutrinos; background-color: #7a161e;}
 .controller { grid-area: controller; }
 .infobox { grid-area: infobox; }
 

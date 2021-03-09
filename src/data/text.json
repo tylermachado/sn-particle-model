@@ -1,0 +1,21 @@
+[
+    {
+        "type": "Quarks",
+        "text": "Of the six types of quarks, two are VIPs as far as everyday matter is concerned. Up and down quarks are a key part of protons and neutrons. The other quarks— charm, strange, top and bottom — are heavier and more exotic, with unusual properties. For example, strange quarks got their name because particles that contain them take a strangely long time to decay into other particles. Particles containing exotic quarks are produced in nature when high-energy particles from space strike Earth’s atmosphere. Particle accelerators can do the job too. Thanks to the aptly-named “strong force” that glues quarks to one another, quarks are never found alone, but are always combined with other quarks or their antiparticles, antiquarks, to create larger particles."
+    },{
+        "type": "Charged Leptons",
+        "text": "Electrons, those familiar particles that swirl within atoms, are not alone. They have heavier relatives: muons, and the even heftier taus. The trio are known as “charged leptons” for their negative electric charge. Muons and taus aren’t found in normal atoms, but, like exotic quarks, they can be produced in high-energy particle collisions. Muons and taus aren’t long for this world, though: They rapidly decay into other particles."
+    },{
+        "type": "Neutrinos",
+        "text": "Each of the charged leptons — electrons, muons, and taus — has a lightweight, neutral companion, called a neutrino. These particles are produced in various processes such as radioactive decay, reactions within the sun’s core and in exploding stars. Once formed, neutrinos interact with other matter very rarely — they can pass through the entire Earth and come out the other side unscathed. Neutrinos are the most abundant massive particles in the universe, but their extreme stealth means many people are unaware of their existence. Scientists are still pondering why the particles have such ultra small masses — less than a millionth that of an electron."
+    },{
+        "type": "Higgs Boson",
+        "text": "The Higgs boson is the telltale signature of how fundamental particles obtain mass. According to the standard model, an invisible Higgs field permeates all of space, and mass is the result of particles interacting with that field. A Higgs boson is the equivalent of a tiny ripple in that Higgs field. Particle physicists rejoiced when the Higgs — the final missing piece of the standard model — was found at the European particle physics lab CERN in Geneva in 2012."
+    },{
+        "type": "Force-carrying particles",
+        "text": "The force-carrying particles transmit interactions between particles. Photons, particles of light, transmit the electromagnetic force, which causes the push-and-pull of electrically charged particles. The human eye is a photon detector — spotting photons of particular wavelengths, which are copiously produced in the sun or other stars. Less familiar particles disseminate the other forces. Gluons transmit the strong force, which holds quarks together. And W and Z bosons carry the weak force, which allows for certain radioactive decays and other processes. (Z bosons have no electric charge, while W bosons come in positive and negative versions.) The fourth force of nature, gravity, isn’t yet incorporated into the standard model framework."
+    },{
+        "type": "Antimatter",
+        "text": "Each type of matter particle has an antimatter partner. These antiparticles have the opposite electric charge, but are otherwise identical to their alter-egos. Physicists are still trying to understand why matter is more prevalent than antimatter. For example, negatively charged electrons are much more prevalent in our cosmos than their positively-charged antiparticle, positrons. Because neutrinos have no electric charge, scientists are still puzzling over whether neutrinos and antineutrinos are distinct particles, or the same thing."
+    }
+]
