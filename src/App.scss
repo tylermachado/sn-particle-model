@@ -1,6 +1,14 @@
 $md-screen: 426px;
 $lg-screen: 769px;
 
+sub {
+  font-size: 2rem;
+  
+    display: flex;
+    align-items: baseline;
+    vertical-align: unset;
+}
+
 .grid-container {
   background-color: #ddd;
   height:100vh;
@@ -38,18 +46,17 @@ $lg-screen: 769px;
 .controller { grid-area: controller; }
 .infobox { grid-area: infobox; }
 
-.particle {
-
-}
-
 .infobox {
   // border: 3px solid #222;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: calc(100% - 40px);
   background-color: white;
   font-size:13px;
   overflow:hidden;
+
+    padding: 60px 20px 20px;
+    text-align: left;
 
   @media (min-width: $lg-screen) { 
     position:unset;
@@ -76,6 +83,7 @@ $lg-screen: 769px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  padding:2vw;
 }
 
 .particle {
@@ -83,8 +91,12 @@ $lg-screen: 769px;
     width:14vw;
     height:18vh;
     margin:0 1vw;
-    display:block;
+    display:flex;
     border-radius:10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
   }
 
 .area-higgs-boson {
@@ -92,8 +104,6 @@ $lg-screen: 769px;
     background-color: rgb(240, 129, 109);
     top: calc(50vh - 9vh - 5px);
     left: calc(60vw - 7vw - 5px);
-    display: flex;
-    align-items: center;
     border: 5px solid white;
 }
 
