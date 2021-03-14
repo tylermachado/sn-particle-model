@@ -38,39 +38,62 @@ $lg-screen: 769px;
 .controller { grid-area: controller; }
 .infobox { grid-area: infobox; }
 
+.particle {
+
+}
+
 .infobox {
-  border: 3px solid #222;
+  // border: 3px solid #222;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: white;
+  font-size:13px;
+  overflow:hidden;
 
   @media (min-width: $lg-screen) { 
     position:unset;
   }
+
+  * {
+    margin:10px;
+  }
+}
+
+.controller {
+    position: absolute;
+    padding:0 1rem;
+    height: 30px;
+    background-color: #999;
+    top: calc(50vh - 15px);
+    left: calc(25vw - 60px);
+    display: flex;
+    align-items: center;
 }
 
 .zone {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  gap: 10px 10px;
-  padding:10px 0 0 10px;
-  grid-template-areas:
-    ". . ."
-    ". . .";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
-    div {
-      background-color:#999;
-      opacity:0.6;
-      width:29vw;
-      height:29vw;
+.particle {
+    background-color: rgba(0,0,0,0.2);
+    width:16vw;
+    height:20vh;
+    display:block;
+    border-radius:10px;
+  }
 
-      @media (min-width: $lg-screen) { 
-        width: 12vw;
-        height:12vw;
-      }
-    }
+.area-higgs-boson {
+    position: absolute;
+    background-color: #999;
+    top: calc(50vh - 10vh - 5px);
+    left: calc(60vw - 8vw - 5px);
+    display: flex;
+    align-items: center;
+    border: 5px solid white;
 }
 
 @media all and (-ms-high-contrast:none) {

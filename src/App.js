@@ -28,14 +28,33 @@ class App extends Component {
         <section className="controller">
           matter .. antimatter
         </section>
+        <section className="area-higgs-boson particle" onMouseOver={() => this.changeActive("higgs boson")}>
+          Hb
+        </section>
         <div className="grid-container">
           <section className="area-quarks zone" onMouseOver={() => this.changeActive("quarks")}>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
           </section>
           <section className="area-charged-leptons zone" onMouseOver={() => this.changeActive("charged leptons")}>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
           </section>
           <section className="area-neutrinos zone" onMouseOver={() => this.changeActive("neutrinos")}>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
           </section>
           <section className="area-force-carrying-particles zone" onMouseOver={() => this.changeActive("force-carrying particles")}>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
           </section>
           <section className="infobox">
             <h3>{this.state.active.type}</h3>
