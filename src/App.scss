@@ -55,7 +55,7 @@ $lg-screen: 769px;
     position:unset;
   }
 
-  * {
+  h3, p {
     margin:10px;
   }
 }
@@ -80,17 +80,18 @@ $lg-screen: 769px;
 
 .particle {
     background-color: rgba(0,0,0,0.2);
-    width:16vw;
-    height:20vh;
+    width:14vw;
+    height:18vh;
+    margin:0 1vw;
     display:block;
     border-radius:10px;
   }
 
 .area-higgs-boson {
     position: absolute;
-    background-color: #999;
-    top: calc(50vh - 10vh - 5px);
-    left: calc(60vw - 8vw - 5px);
+    background-color: rgb(240, 129, 109);
+    top: calc(50vh - 9vh - 5px);
+    left: calc(60vw - 7vw - 5px);
     display: flex;
     align-items: center;
     border: 5px solid white;

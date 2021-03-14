@@ -58,7 +58,7 @@ class App extends Component {
           </section>
           <section className="infobox">
             <h3>{this.state.active.type}</h3>
-            <p>{this.state.active.text}</p>
+            <p dangerouslySetInnerHTML={ { __html: this.state.active.text} }></p>
           </section>
         </div>
       </div>
