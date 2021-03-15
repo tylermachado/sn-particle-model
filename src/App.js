@@ -1,6 +1,8 @@
 import './App.scss';
 import React, { Component } from 'react'
 import * as data from './data/text.json';
+import * as particles from './data/particles.json';
+import * as antiparticles from './data/antiparticles.json';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +12,8 @@ class App extends Component {
       "active": {
         type: "Active",
         text: "this will disappear"
-      }
+      },
+      "substance": "matter"
     };
   }
 
@@ -29,33 +32,20 @@ class App extends Component {
           matter .. antimatter
         </section>
         <section className="area-higgs-boson particle" onMouseOver={() => this.changeActive("higgs boson")}>
-          H
+          <div className="symbol">H</div>
+          <div className="name">Higgs Boson</div>
         </section>
-        <div className="grid-container">
-          <section className="area-quarks zone" onMouseOver={() => this.changeActive("quarks")}>
-            <div class="particle">u</div>
-            <div class="particle">c</div>
-            <div class="particle">t</div>
-            <div class="particle">d</div>
-            <div class="particle">s</div>
-            <div class="particle">b</div>
-          </section>
-          <section className="area-charged-leptons zone" onMouseOver={() => this.changeActive("charged leptons")}>
-            <div class="particle">e</div>
-            <div class="particle">μ</div>
-            <div class="particle">τ</div>
-          </section>
-          <section className="area-neutrinos zone" onMouseOver={() => this.changeActive("neutrinos")}>
-            <div class="particle">ν<sub>e</sub></div>
-            <div class="particle">ν<sub>μ</sub></div>
-            <div class="particle">ν<sub>τ</sub></div>
-          </section>
-          <section className="area-force-carrying-particles zone" onMouseOver={() => this.changeActive("force-carrying particles")}>
-            <div class="particle">γ</div>
-            <div class="particle">g</div>
-            <div class="particle">W+</div>
-            <div class="particle">Z</div>
-          </section>
+        <div className={"grid-container mode-" + this.state.substance}>
+          {particles.default.map(p => (
+            <section className={"area-" + p.particle.split(' ').join('-') + " zone"} onMouseOver={() => this.changeActive(p.particle)}>
+              {p.subtypes.map(subt =>(
+                <div className="particle">
+                  <div className="symbol">{subt.symbol}</div>
+                  <div className="name">{subt.name}</div>
+                </div>
+              ))}
+            </section>
+          ))}
           <section className="infobox">
             <h3>{this.state.active.type}</h3>
             <p dangerouslySetInnerHTML={ { __html: this.state.active.text} }></p>

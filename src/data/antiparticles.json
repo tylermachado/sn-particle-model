@@ -1,0 +1,86 @@
+[
+    {
+        "particle": "quarks",
+        "subtypes": [
+            {
+                "name": "antiup",
+                "symbol": "u"
+            },
+            {
+                "name": "anticharm",
+                "symbol": "c"
+            },
+            {
+                "name": "antitop",
+                "symbol": "t"
+            },
+            {
+                "name": "antidown",
+                "symbol": "d"
+            },
+            {
+                "name": "antistrange",
+                "symbol": "s"
+            },
+            {
+                "name": "antibottom",
+                "symbol": "b"
+            }
+        ]
+    },
+    {
+        "particle": "charged leptons",
+        "subtypes": [
+            {
+                "name": "positron",
+                "symbol": "e+"
+            },
+            {
+                "name": "antimuon",
+                "symbol": "μ+"
+            },
+            {
+                "name": "antitau",
+                "symbol": "τ+"
+            }
+        ]
+    },
+    {
+        "particle": "neutrinos",
+        "subtypes": [
+            {
+                "name": "electron antineutrino",
+                "symbol": "νe"
+            },
+            {
+                "name": "muon antineutrino",
+                "symbol": "νμ"
+            },
+            {
+                "name": "tau antineutrino",
+                "symbol": "ντ"
+            }
+        ]
+    },
+    {
+        "particle": "force-carrying particles",
+        "subtypes": [
+            {
+                "name": "photon",
+                "symbol": "γ"
+            },
+            {
+                "name": "gluon",
+                "symbol": "g"
+            },
+            {
+                "name": "W boson",
+                "symbol": "W±"
+            },
+            {
+                "name": "Z boson",
+                "symbol": "Z"
+            }
+        ]
+    }
+]

@@ -91,12 +91,25 @@ sub {
     width:14vw;
     height:18vh;
     margin:0 1vw;
-    display:flex;
+    // display:flex;
     border-radius:10px;
+    text-align:center;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
-    font-weight: bold;
+    flex-basis: 1;
+
+    .symbol {
+      font-size: 4rem;
+      font-weight: bold;
+      width:100%;
+      display:block;
+    }
+
+    .name {
+      font-size:1rem;
+      width:100%;
+      display:block;
+    }
   }
 
 .area-higgs-boson {
