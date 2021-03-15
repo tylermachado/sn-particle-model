@@ -75,7 +75,8 @@ class App extends Component {
     return (
       <div className="App">
         <section className="controller" onClick={() => this.changeMode()}>
-          matter .. antimatter
+          <div className={this.state.substance === "matter" ? 'controller-item active' : 'controller-item'}>matter</div>
+          <div className={this.state.substance === "antimatter" ? 'controller-item active' : 'controller-item'}>antimatter</div>
         </section>
         <section className="area-higgs-boson particle" onMouseOver={() => this.changeActive("higgs boson")}>
           <div className="symbol">H</div>
