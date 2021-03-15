@@ -10,8 +10,8 @@ class App extends Component {
     this.changeActive = this.changeActive.bind(this);
     this.state = { 
       "active": {
-        type: "Active",
-        text: "this will disappear"
+        type: "",
+        text: ""
       },
       "substance": "matter"
     };
@@ -25,10 +25,56 @@ class App extends Component {
     })
   }
 
+  changeMode() {
+    if (this.state.substance === "matter") {
+      this.setState({
+        substance: "antimatter",
+        active: {
+          type: "Antimatter",
+          text: "Each type of matter particle has an antimatter partner. Antiparticles have the opposite electric charge, but are otherwise identical to their alter-egos. Physicists are still <a href='https://www.sciencenews.org/article/mounting-evidence-suggests-neutrinos-are-key-why-antimatter-is-rare'>trying to understand</a> why matter is more prevalent than antimatter. For example, negatively charged electrons are much more prevalent in our cosmos than their positively-charged antiparticle, positrons. Because neutrinos have no electric charge, scientists are puzzling over whether neutrinos and antineutrinos are <a href='https://www.sciencenews.org/article/quest-identify-nature-neutrinos-alter-ego-heating'>distinct particles</a>, or the same thing."
+        }
+      })
+    } else {
+      this.setState({
+        substance: "matter",
+        active: {
+          type: "",
+          text: ""
+        }
+      })
+    }
+  }
+
   render() {
+    let particlesrendered;
+    if (this.state.substance === "matter") {
+      particlesrendered = particles.default.map(p => (
+          <section className={"area-" + p.particle.split(' ').join('-') + " zone"} onMouseOver={() => this.changeActive(p.particle)}>
+            {p.subtypes.map(subt => (
+              <div className="particle">
+                <div className="symbol">{subt.symbol}</div>
+                <div className="name">{subt.name}</div>
+              </div>
+            ))}
+          </section>
+        ))
+      
+    } else {
+      particlesrendered = antiparticles.default.map(p => (
+          <section className={"area-" + p.particle.split(' ').join('-') + " zone"}>
+            {p.subtypes.map(subt => (
+              <div className="particle">
+                <div className="symbol">{subt.symbol}</div>
+                <div className="name">{subt.name}</div>
+              </div>
+            ))}
+          </section>
+        ))
+      
+    }
     return (
       <div className="App">
-        <section className="controller">
+        <section className="controller" onClick={() => this.changeMode()}>
           matter .. antimatter
         </section>
         <section className="area-higgs-boson particle" onMouseOver={() => this.changeActive("higgs boson")}>
@@ -36,16 +82,7 @@ class App extends Component {
           <div className="name">Higgs Boson</div>
         </section>
         <div className={"grid-container mode-" + this.state.substance}>
-          {particles.default.map(p => (
-            <section className={"area-" + p.particle.split(' ').join('-') + " zone"} onMouseOver={() => this.changeActive(p.particle)}>
-              {p.subtypes.map(subt =>(
-                <div className="particle">
-                  <div className="symbol">{subt.symbol}</div>
-                  <div className="name">{subt.name}</div>
-                </div>
-              ))}
-            </section>
-          ))}
+          {particlesrendered}
           <section className="infobox">
             <h3>{this.state.active.type}</h3>
             <p dangerouslySetInnerHTML={ { __html: this.state.active.text} }></p>
