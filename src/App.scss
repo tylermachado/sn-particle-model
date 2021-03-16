@@ -65,10 +65,14 @@ sub {
   // border: 3px solid #222;
   width: calc(100% - 20px);
   background-color: white;
-  font-size:13px;
+  font-size:14px;
   overflow:hidden;
   padding: 10px;
   text-align: left;
+
+  a {
+    color: #176cab;
+  }
 
   @media (min-width: $md-screen) { 
     width: calc(100% - 40px);
@@ -81,7 +85,7 @@ sub {
 }
 
 .controller {
-    @media screen and (min-width: $lg-screen) {
+    @media (min-width: $md-screen) {
       position: absolute;
       top: calc(50vh - 28px);
       left: calc(25vw - 60px);
@@ -153,7 +157,7 @@ sub {
       display:block;
     }
 
-    @media screen and (min-width: $md-screen) {
+    @media (min-width: $md-screen) {
       width:14vw;
       height:18vh;
       margin:0 1vw;
@@ -172,7 +176,12 @@ sub {
   }
 
 .area-higgs-boson {
-    @media screen and (min-width: $lg-screen) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+    @media (min-width: $md-screen) {
 
       position: absolute;
       top: calc(50vh - 9vh - 5px);
