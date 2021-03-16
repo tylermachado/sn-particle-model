@@ -64,7 +64,7 @@ class App extends Component {
           <section className={"area-" + p.particle.split(' ').join('-') + " zone"}>
             {p.subtypes.map(subt => (
               <div className="particle">
-                <div className="symbol">{subt.symbol}</div>
+                <div className="symbol"><span className="symbol-text">{subt.symbol}</span></div>
                 <div className="name">{subt.name}</div>
               </div>
             ))}

@@ -127,10 +127,11 @@ sub {
 .particle {
     background-color: rgba(255,255,255,0.5);
     width:15vw;
-      height:15vw;
-      margin:0 0.5vw;
-    // display:flex;
+    height:15vw;
+    margin:0 0.5vw;
     border-radius:10px;
+    display:flex;
+    flex-wrap:wrap;
     text-align:center;
     justify-content: center;
     align-items: center;
