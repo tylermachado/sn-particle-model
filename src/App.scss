@@ -1,3 +1,4 @@
+$sm-screen: 0px;
 $md-screen: 426px;
 $lg-screen: 769px;
 
@@ -18,31 +19,30 @@ sub {
 
 .grid-container {
   background-color: #ddd;
-  height:100vh;
   text-align: center;
+  height:60vh;
   display: grid;
-  gap: 20px 0px;
-
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "controller controller controller"
-    ". area-higgs-boson ."
-    "area-quarks area-quarks area-quarks"
-    "area-neutrinos area-neutrinos area-neutrinos"
-    "area-force area-force area-force"
-    "infobox infobox infobox";
-
-  @media (min-width: $md-screen) {
-    gap:0px 0px;
-   grid-template-columns: repeat(5, 1fr);
+  gap: 0px 0px;
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 0.66fr);
   gap: 0px 0px;
   grid-template-areas:
+    "controller controller controller controller controller"
     "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
     "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
-    "area-charged-leptons area-charged-leptons area-charged-leptons infobox infobox"
-    "area-neutrinos area-neutrinos area-neutrinos infobox infobox";
+    "area-charged-leptons area-charged-leptons area-charged-leptons area-higgs-boson area-higgs-boson"
+    "area-neutrinos area-neutrinos area-neutrinos area-higgs-boson area-higgs-boson";
+
+  @media (min-width: $md-screen) {
+    height:100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 0.66fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
+      "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
+      "area-charged-leptons area-charged-leptons area-charged-leptons infobox infobox"
+      "area-neutrinos area-neutrinos area-neutrinos infobox infobox";
   }
 }
 .area-quarks { grid-area: area-quarks; background-color: #a0cdea;}
@@ -62,15 +62,12 @@ sub {
 
 .infobox {
   // border: 3px solid #222;
-  position: fixed;
-  bottom: 0;
   width: calc(100% - 40px);
   background-color: white;
   font-size:13px;
   overflow:hidden;
-
-    padding: 60px 20px 20px;
-    text-align: left;
+  padding: 80px 20px 20px;
+  text-align: left;
 
   @media (min-width: $lg-screen) { 
     position:unset;
@@ -82,12 +79,15 @@ sub {
 }
 
 .controller {
-    position: absolute;
+    @media screen and (min-width: $lg-screen) {
+      position: absolute;
+      top: calc(50vh - 28px);
+      left: calc(25vw - 60px);
+
+    }
     padding:5px;
     background-color: #aaa;
     color: #777;
-    top: calc(50vh - 28px);
-    left: calc(25vw - 60px);
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -124,9 +124,10 @@ sub {
 
 .particle {
     background-color: rgba(255,255,255,0.5);
-    width:14vw;
-    height:18vh;
-    margin:0 1vw;
+    
+    width:15vw;
+      height:15vw;
+      margin:0 0.5vw;
     // display:flex;
     border-radius:10px;
     text-align:center;
@@ -149,13 +150,22 @@ sub {
       font-size:1rem;
       display:block;
     }
+
+    @media screen and (min-width: $md-screen) {
+      width:14vw;
+      height:18vh;
+      margin:0 1vw;
+    }
   }
 
 .area-higgs-boson {
+    @media screen and (min-width: $lg-screen) {
+
     position: absolute;
-    background-color: rgb(240, 129, 109);
     top: calc(50vh - 9vh - 5px);
     left: calc(60vw - 7vw - 5px);
+    }
+    background-color: rgb(240, 129, 109);
     border: 5px solid white;
 }
 
