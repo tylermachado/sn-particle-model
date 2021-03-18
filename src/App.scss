@@ -128,8 +128,7 @@ sub, sup {
 
 .mode-antimatter .area-quarks .particle .symbol,
 .mode-antimatter .area-neutrinos .particle .symbol {
-  text-decoration: underline;
-  text-underline-offset: -0.9em;
+  border-top: 5px solid black;
 }
 
 .particle {
@@ -181,7 +180,8 @@ sub, sup {
       .symbol {
         font-size: 3rem;
         font-weight: bold;
-        display:block;
+        display: initial;
+        line-height: 150%;
       }
 
       .name {
