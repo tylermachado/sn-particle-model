@@ -6,11 +6,8 @@ $lg-screen: 769px;
   font-family: museo-sans, sans-serif;
 }
 
-sub {
-  font-size: 2rem;
-    display: flex;
-    align-items: baseline;
-    vertical-align: unset;
+sub, sup {
+  font-size: 60%;
 }
 
 .zone {
@@ -18,23 +15,25 @@ sub {
 }
 
 .grid-container {
-  background-color: #ddd;
+  background-color: #fff;
   text-align: center;
+  position:relative;
   display: grid;
   gap: 0px 0px;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 2fr 2fr 2fr 2fr 8fr;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-rows: 2fr 2fr 2fr 2fr 1fr 8fr;
   gap: 0px 0px;
   grid-template-areas:
-    "controller controller controller controller controller"
-    "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
-    "area-quarks area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
-    "area-charged-leptons area-charged-leptons area-charged-leptons area-higgs-boson area-higgs-boson"
-    "area-neutrinos area-neutrinos area-neutrinos area-higgs-boson area-higgs-boson"
-    "infobox infobox infobox infobox infobox";
+    "area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
+    "area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
+    "area-charged-leptons area-charged-leptons  area-higgs-boson area-higgs-boson"
+    "area-neutrinos area-neutrinos  area-higgs-boson area-higgs-boson"
+    ". controller controller ."
+    "infobox infobox infobox infobox"
+    ;
 
   @media (min-width: $md-screen) {
-    height:100vh;
+    height: 700px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(4, minmax(0, 1fr));
     gap: 0px 0px;
@@ -76,6 +75,7 @@ sub {
   @media (min-width: $md-screen) { 
     width: calc(100% - 40px);
     padding: 80px 20px 20px;
+    border: 1px solid black;
   }
 
   h3, p {
@@ -86,7 +86,7 @@ sub {
 .controller {
     @media (min-width: $md-screen) {
       position: absolute;
-      top: calc(50vh - 28px);
+      top: 50%;
       left: calc(25vw - 60px);
 
     }
@@ -134,15 +134,27 @@ sub {
 .particle {
     background-color: rgba(255,255,255,0.5);
     width:12vw;
-    height:15vw;
-    margin:0 0.5vw;
+    margin:0 0.5vw 1vw;
     border-radius:10px;
+    position:relative;
     display:flex;
     flex-wrap:wrap;
     text-align:center;
     justify-content: center;
     align-items: center;
     flex-basis: 1;
+
+      &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      & .particle-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
 
     .symbol, .name {
       padding:0 10px;
@@ -162,11 +174,10 @@ sub {
 
     @media (min-width: $md-screen) {
       width:12vw;
-      height:18vh;
-      margin:0 1vw;
+      margin:0 1vw 2vw;
 
       .symbol {
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: bold;
         display:block;
       }
@@ -185,11 +196,11 @@ sub {
       margin: auto;
 
     @media (min-width: $md-screen) {
-
       position: absolute;
-      top: calc(50vh - 9vh - 5px);
-      left: calc(50vw - 6vw - 5px);
-      }
+      top: calc(50% - 6vw - 5px);
+      left: calc(50% - 6vw - 5px);
+    }
+
       background-color: rgb(240, 129, 109);
       border: 5px solid white;
     }

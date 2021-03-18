@@ -50,15 +50,15 @@
         "subtypes": [
             {
                 "name": "electron neutrino",
-                "symbol": "𝝼e"
+                "symbol": "𝝼<sub>e</sub>"
             },
             {
                 "name": "muon neutrino",
-                "symbol": "𝝼μ"
+                "symbol": "𝝼<sub>μ</sub>"
             },
             {
                 "name": "tau neutrino",
-                "symbol": "𝝼τ"
+                "symbol": "𝝼<sub>τ</sub>"
             }
         ]
     },
@@ -75,7 +75,7 @@
             },
             {
                 "name": "W boson",
-                "symbol": "W±"
+                "symbol": "W<sup>±</sup>"
             },
             {
                 "name": "Z boson",
