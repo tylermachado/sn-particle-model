@@ -15,13 +15,14 @@ sub, sup {
 }
 
 .grid-container {
+  height:75vh;
   background-color: #fff;
   text-align: center;
   position:relative;
   display: grid;
   gap: 0px 0px;
   grid-template-columns: repeat(4, minmax(0,1fr));
-  grid-template-rows: 2fr 2fr 2fr 2fr 1fr 8fr;
+  grid-template-rows: repeat(4, minmax(0, 3fr)) 1fr 8fr;
   gap: 0px 0px;
   grid-template-areas:
     "area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
@@ -48,7 +49,7 @@ sub, sup {
 .area-charged-leptons { grid-area: area-charged-leptons; background-color: #d98c91;}
 .area-neutrinos { grid-area: area-neutrinos; background-color: #ac001e;}
 .area-force-carrying-particles { grid-area: area-force-carrying-particles; background-color: #f5c68b;}
-.area-higgs-boson { grid-area: area-higgs-boson; background-color: #e5755d;}
+.area-higgs-boson { grid-area: area-higgs-boson; background-color: #DF4926;}
 .controller { grid-area: controller; }
 .infobox { grid-area: infobox; }
 
@@ -86,7 +87,7 @@ sub, sup {
 .controller {
     @media (min-width: $md-screen) {
       position: absolute;
-      top: 50%;
+      top: calc(50% - 25px);
       left: calc(25vw - 60px);
 
     }
@@ -194,16 +195,19 @@ sub, sup {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: auto;
+      margin: 0;
 
     @media (min-width: $md-screen) {
       position: absolute;
       top: calc(50% - 6vw - 5px);
       left: calc(50% - 6vw - 5px);
+      background-color: unset;
     }
 
-      background-color: rgb(240, 129, 109);
-      border: 5px solid white;
+      .particle {
+        background-color: rgb(240, 129, 109);
+        border: 5px solid white;
+      }
     }
 
 @media all and (-ms-high-contrast:none) {

@@ -86,11 +86,12 @@ class App extends Component {
             <div className={this.state.substance === "matter" ? 'controller-item active' : 'controller-item'}>matter</div>
             <div className={this.state.substance === "antimatter" ? 'controller-item active' : 'controller-item'}>antimatter</div>
           </section>
-          <section className="area-higgs-boson particle" onMouseOver={() => this.changeActive("higgs boson")}>
-
-            <div className="particle-content">
-              <div className="symbol">H</div>
-              <div className="name">Higgs Boson</div>
+          <section className="area-higgs-boson" onMouseOver={() => this.changeActive("higgs boson")}>
+            <div className="particle">
+              <div className="particle-content">
+                <div className="symbol">H</div>
+                <div className="name">Higgs Boson</div>
+              </div>
             </div>
           </section>
           <section className="infobox">
