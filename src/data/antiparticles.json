@@ -50,15 +50,15 @@
         "subtypes": [
             {
                 "name": "electron antineutrino",
-                "symbol": "νe"
+                "symbol": "𝝼e"
             },
             {
                 "name": "muon antineutrino",
-                "symbol": "νμ"
+                "symbol": "𝝼μ"
             },
             {
                 "name": "tau antineutrino",
-                "symbol": "ντ"
+                "symbol": "𝝼τ"
             }
         ]
     },
