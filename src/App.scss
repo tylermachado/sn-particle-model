@@ -118,7 +118,7 @@ sub, sup {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding:3vw;
+  padding:4vw 1vw;
 
   &.area-force-carrying-particles {
     padding:3vw 10vw;
@@ -157,18 +157,19 @@ sub, sup {
       }
 
     .symbol, .name {
-      padding:0 10px;
-      width: calc(100% - 20px);
+      padding:0 5px;
+      width: calc(100% - 10px);
+      letter-spacing: -0.02rem;
     }
 
     .symbol {
-      font-size: 1.7rem;
+      font-size: 1.2rem;
       font-weight: bold;
       display:block;
     }
 
     .name {
-      font-size:0.8rem;
+      font-size:0.6rem;
       display:block;
     }
 
