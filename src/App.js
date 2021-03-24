@@ -50,7 +50,11 @@ class App extends Component {
     let particlesrendered;
     // if (this.state.substance === "matter") {
       particlesrendered = particles.default.map(p => (
-          <section className={"area-" + p.particle.split(' ').join('-') + " zone"} onMouseOver={() => this.changeActive(p.particle)}>
+        <section className={
+          (this.state.active["type"].toLowerCase() === p.particle.toLowerCase()) ?
+            "area-" + p.particle.split(' ').join('-') + " zone active" :
+            "area-" + p.particle.split(' ').join('-') + " zone"
+          } onMouseOver={() => this.changeActive(p.particle)}>
             {p.subtypes.map(subt => (
               <div className="particle">
                 <div className="particle-content">
@@ -86,7 +90,11 @@ class App extends Component {
             <div className={this.state.substance === "matter" ? 'controller-item active' : 'controller-item'}>matter</div>
             <div className={this.state.substance === "antimatter" ? 'controller-item active' : 'controller-item'}>antimatter</div>
           </section>
-          <section className="area-higgs-boson" onMouseOver={() => this.changeActive("higgs boson")}>
+          <section className={
+              (this.state.active["type"] === "Higgs Boson") ?
+              "area-higgs-boson zone active" :
+              "area-higgs-boson zone"
+           } onMouseOver={() => this.changeActive("higgs boson")}>
             <div className="particle">
               <div className="particle-content">
                 <div className="symbol">H</div>
