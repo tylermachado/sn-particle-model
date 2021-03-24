@@ -51,7 +51,10 @@ class App extends Component {
     // if (this.state.substance === "matter") {
       particlesrendered = particles.default.map(p => (
         <section className={
-          (this.state.active["type"].toLowerCase() === p.particle.toLowerCase()) ?
+          (
+            (this.state.active["type"].toLowerCase() === p.particle.toLowerCase()) ||
+            (this.state.active["type"] == "Standard model of particle physics")
+          ) ?
             "area-" + p.particle.split(' ').join('-') + " zone active" :
             "area-" + p.particle.split(' ').join('-') + " zone"
           } onMouseOver={() => this.changeActive(p.particle)}>
@@ -91,7 +94,10 @@ class App extends Component {
             <div className={this.state.substance === "antimatter" ? 'controller-item active' : 'controller-item'}>antimatter</div>
           </section>
           <section className={
-              (this.state.active["type"] === "Higgs Boson") ?
+              (
+                (this.state.active["type"].toLowerCase() === "higgs boson") ||
+                (this.state.active["type"] == "Standard model of particle physics")
+              ) ?
               "area-higgs-boson zone active" :
               "area-higgs-boson zone"
            } onMouseOver={() => this.changeActive("higgs boson")}>
