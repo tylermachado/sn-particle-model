@@ -203,6 +203,7 @@ sub, sup {
       align-items: center;
       margin: 0;
       opacity: 1;
+      padding: 0;
 
       &:not(.active) .particle .particle-content {
         opacity: 0.4;
@@ -218,6 +219,7 @@ sub, sup {
       .particle {
         background-color: rgb(240, 129, 109);
         border: 5px solid white;
+        margin:0;
       }
     }
 
