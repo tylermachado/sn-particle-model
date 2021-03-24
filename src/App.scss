@@ -15,7 +15,7 @@ sub, sup {
 }
 
 .grid-container {
-  height:75vh;
+  height:115vw;
   background-color: #fff;
   text-align: center;
   position:relative;
@@ -119,7 +119,7 @@ sub, sup {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  padding:4vw 4vw;
+  padding:1vw 1vw;
   border: 3px solid transparent;
   opacity: 0.6;
 
@@ -129,6 +129,10 @@ sub, sup {
 
   &.area-force-carrying-particles {
     padding:3vw 10vw;
+  }
+
+  @media (min-width: $lg-screen) {
+    padding:3vw 3vw;
   }
 }
 
