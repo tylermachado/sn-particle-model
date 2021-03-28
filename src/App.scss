@@ -1,5 +1,5 @@
 $sm-screen: 0px;
-$md-screen: 600px;
+$md-screen: 500px;
 $lg-screen: 769px;
 
 * {
@@ -15,14 +15,14 @@ sub, sup {
 }
 
 .grid-container {
-  height:115vw;
+  height:650px;
   background-color: #fff;
   text-align: center;
   position:relative;
   display: grid;
   gap: 0px 0px;
   grid-template-columns: repeat(4, minmax(0,1fr));
-  grid-template-rows: repeat(4, minmax(0, 3fr)) 1fr 8fr;
+  grid-template-rows: repeat(4, minmax(0, 3fr)) 1fr 14fr;
   gap: 0px 0px;
   grid-template-areas:
     "area-quarks area-quarks area-force-carrying-particles area-force-carrying-particles"
@@ -34,7 +34,6 @@ sub, sup {
     ;
 
   @media (min-width: $md-screen) {
-    height: 600px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(4, minmax(0, 1fr));
     gap: 0px 0px;
@@ -115,24 +114,34 @@ sub, sup {
 }
 
 .zone {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  padding:1vw 1vw;
+  display:flex;
+  justify-content: center;
+  align-items:center;
   border: 3px solid transparent;
   opacity: 0.6;
+
+  .particle-container {
+      display: grid;
+      grid-template-rows: repeat(1, 12vw);
+      grid-template-columns: repeat(3, 12vw);
+      grid-gap: 5px;
+
+    .area-force-carrying-particles & {
+      grid-template-columns: repeat(2, 12vw);
+    }
+  }
+
+  &.area-force-carrying-particles {
+     .particle-container {
+      grid-template-columns: repeat(2, 12vw);
+     }
+  }
 
   &.active {
     opacity: 1;
   }
 
-  &.area-force-carrying-particles {
-    padding:3vw 10vw;
-  }
-
   @media (min-width: $lg-screen) {
-    padding:3vw 3vw;
   }
 }
 
@@ -143,8 +152,8 @@ sub, sup {
 
 .particle {
     background-color: rgba(255,255,255,0.5);
-    width:11vw;
-    margin:0 0.5vw 1vw;
+    // width:11vw;
+    // margin:0 0.5vw 1vw;
     border-radius:10px;
     position:relative;
     display:flex;
@@ -183,9 +192,9 @@ sub, sup {
     }
 
     @media (min-width: $md-screen) {
-      width:11vw;
-      max-width: 120px;
-      margin:0 1vw 2vw;
+      // width:11vw;
+      // max-width: 120px;
+      // margin:0 1vw 2vw;
 
       .symbol {
         font-size: 3rem;
@@ -209,6 +218,15 @@ sub, sup {
       opacity: 1;
       padding: 0;
 
+      .particle {
+        background-color: rgb(240, 129, 109);
+        border: 5px solid white;
+        margin:0;
+        width: 12vw;
+        height: 12vw;
+      }
+      
+
       &:not(.active) .particle .particle-content {
         opacity: 0.4;
       }
@@ -220,11 +238,7 @@ sub, sup {
       background-color: unset;
     }
 
-      .particle {
-        background-color: rgb(240, 129, 109);
-        border: 5px solid white;
-        margin:0;
-      }
+      
     }
 
 @media all and (-ms-high-contrast:none) {
