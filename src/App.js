@@ -48,16 +48,17 @@ class App extends Component {
 
   render() {
     let particlesrendered;
-    // if (this.state.substance === "matter") {
+    if (this.state.substance === "matter") {
       particlesrendered = particles.default.map(p => (
         <section className={
           (
             (this.state.active["type"].toLowerCase() === p.particle.toLowerCase()) ||
+            (this.state.substance === "antimatter") ||
             (this.state.active["type"] == "Standard model of particle physics")
           ) ?
             "area-" + p.particle.split(' ').join('-') + " zone active" :
             "area-" + p.particle.split(' ').join('-') + " zone"
-          } onMouseOver={() => this.changeActive(p.particle)}>
+          } onClick={() => this.changeActive(p.particle)}>
             <div className="particle-container">
               {p.subtypes.map(subt => (
                 <div className="particle">
@@ -71,21 +72,31 @@ class App extends Component {
           </section>
         ))
       
-    // } else {
-    //   particlesrendered = antiparticles.default.map(p => (
-    //       <section className={"area-" + p.particle.split(' ').join('-') + " zone"}>
-    //         {p.subtypes.map(subt => (
-    //           <div className="particle">
-    //             <div className="particle-content">
-    //               <div className="symbol"><span className="symbol-text">{subt.symbol}</span></div>
-    //               <div className="name">{subt.name}</div>
-    //             </div>
-    //           </div>
-    //         ))}
-    //       </section>
-    //     ))
+    } else {
+      particlesrendered = antiparticles.default.map(p => (
+        <section className={
+          (
+            (this.state.active["type"].toLowerCase() === p.particle.toLowerCase()) ||
+            (this.state.substance === "antimatter") ||
+            (this.state.active["type"] == "Standard model of particle physics")
+          ) ?
+            "area-" + p.particle.split(' ').join('-') + " zone active" :
+            "area-" + p.particle.split(' ').join('-') + " zone"
+        } onClick={() => this.changeActive(p.particle)}>
+          <div className="particle-container">
+            {p.subtypes.map(subt => (
+              <div className="particle">
+                <div className="particle-content">
+                  <div className="symbol" dangerouslySetInnerHTML={{ __html: subt.symbol }}></div>
+                  <div className="name">{subt.name}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))
       
-    // }
+    }
     return (
       <div className="App">
         
@@ -98,11 +109,12 @@ class App extends Component {
           <section className={
               (
                 (this.state.active["type"].toLowerCase() === "higgs boson") ||
+                (this.state.substance === "antimatter") ||
                 (this.state.active["type"] == "Standard model of particle physics")
               ) ?
               "area-higgs-boson zone active" :
               "area-higgs-boson zone"
-           } onMouseOver={() => this.changeActive("higgs boson")}>
+           } onClick={() => this.changeActive("higgs boson")}>
             <div className="particle">
               <div className="particle-content">
                 <div className="symbol">H</div>

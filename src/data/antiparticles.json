@@ -33,15 +33,15 @@
         "subtypes": [
             {
                 "name": "positron",
-                "symbol": "e+"
+                "symbol": "e<span class='sup'>+</span>"
             },
             {
                 "name": "antimuon",
-                "symbol": "μ+"
+                "symbol": "μ<span class='sup'>+</span>"
             },
             {
                 "name": "antitau",
-                "symbol": "τ+"
+                "symbol": "τ<span class='sup'>+</span>"
             }
         ]
     },
@@ -50,15 +50,15 @@
         "subtypes": [
             {
                 "name": "electron antineutrino",
-                "symbol": "𝝼e"
+                "symbol": "𝝼<span class='sub'>e</span>"
             },
             {
                 "name": "muon antineutrino",
-                "symbol": "𝝼μ"
+                "symbol": "𝝼<span class='sub'>μ</span>"
             },
             {
                 "name": "tau antineutrino",
-                "symbol": "𝝼τ"
+                "symbol": "𝝼<span class='sub'>τ</span>"
             }
         ]
     },
@@ -75,7 +75,7 @@
             },
             {
                 "name": "W boson",
-                "symbol": "W±"
+                "symbol": "W<span class='sup'>±</span>"
             },
             {
                 "name": "Z boson",
