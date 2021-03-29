@@ -37,11 +37,11 @@
             },
             {
                 "name": "antimuon",
-                "symbol": "μ<span class='sup'>+</span>"
+                "symbol": "𝜇<span class='sup'>+</span>"
             },
             {
                 "name": "antitau",
-                "symbol": "τ<span class='sup'>+</span>"
+                "symbol": "𝜏<span class='sup'>+</span>"
             }
         ]
     },
@@ -50,15 +50,15 @@
         "subtypes": [
             {
                 "name": "electron antineutrino",
-                "symbol": "𝝼<span class='sub'>e</span>"
+                "symbol": "𝜈<span class='sub'>e</span>"
             },
             {
                 "name": "muon antineutrino",
-                "symbol": "𝝼<span class='sub'>μ</span>"
+                "symbol": "𝜈<span class='sub'>𝜇</span>"
             },
             {
                 "name": "tau antineutrino",
-                "symbol": "𝝼<span class='sub'>τ</span>"
+                "symbol": "𝜈<span class='sub'>𝜏</span>"
             }
         ]
     },
@@ -67,7 +67,7 @@
         "subtypes": [
             {
                 "name": "photon",
-                "symbol": "γ"
+                "symbol": "𝛾"
             },
             {
                 "name": "gluon",

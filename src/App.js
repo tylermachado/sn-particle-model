@@ -11,7 +11,7 @@ class App extends Component {
     this.state = { 
       "active": {
         type: "Standard model of particle physics",
-        text: "Tap the surrounding sections for more on each category."
+        text: "Tap the colored sections for more on each category."
       },
       "substance": "matter"
     };
@@ -39,8 +39,8 @@ class App extends Component {
       this.setState({
         substance: "matter",
         active: {
-          type: "",
-          text: ""
+          type: "Standard model of particle physics",
+          text: "Tap the colored sections for more on each category."
         }
       })
     }

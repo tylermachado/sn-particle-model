@@ -37,11 +37,11 @@
             },
             {
                 "name": "muon",
-                "symbol": "μ"
+                "symbol": "𝜇"
             },
             {
                 "name": "tau",
-                "symbol": "τ"
+                "symbol": "𝜏"
             }
         ]
     },
@@ -50,15 +50,15 @@
         "subtypes": [
             {
                 "name": "electron neutrino",
-                "symbol": "𝝼<span class='sub'>e</span>"
+                "symbol": "𝜈<span class='sub'>e</span>"
             },
             {
                 "name": "muon neutrino",
-                "symbol": "𝝼<span class='sub'>μ</span>"
+                "symbol": "𝜈<span class='sub'>𝜇</span>"
             },
             {
                 "name": "tau neutrino",
-                "symbol": "𝝼<span class='sub'>τ</span>"
+                "symbol": "𝜈<span class='sub'>𝜏</span>"
             }
         ]
     },
@@ -67,7 +67,7 @@
         "subtypes": [
             {
                 "name": "photon",
-                "symbol": "γ"
+                "symbol": "𝛾"
             },
             {
                 "name": "gluon",

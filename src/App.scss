@@ -12,12 +12,12 @@ $lg-screen: 769px;
 
 .sup {
   position: relative;
-  top: -40%;
+  top: -1rem;
 }
 
 .sub {
   position: relative;
-  top: 5px;
+  top: 0.35rem;
 }
 
 .zone {
@@ -240,6 +240,11 @@ $lg-screen: 769px;
       font-size:0.5rem;
       line-height:0.5rem;
       display:block;
+
+      @media (max-width:350px) {
+        font-size:0.3rem;
+        line-height:0.4rem;
+      }
     }
 
     @media (min-width: $md-screen) {
