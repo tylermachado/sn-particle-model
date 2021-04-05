@@ -11,7 +11,7 @@ class App extends Component {
     this.state = { 
       "active": {
         type: "Standard model of particle physics",
-        text: "Tap the colored sections for more on each category."
+        text: "Tap the colored sections for more on each particle type."
       },
       "substance": "matter"
     };
@@ -40,7 +40,7 @@ class App extends Component {
         substance: "matter",
         active: {
           type: "Standard model of particle physics",
-          text: "Tap the colored sections for more on each category."
+          text: "Tap the colored sections for more on each particle type."
         }
       })
     }
@@ -77,7 +77,7 @@ class App extends Component {
         <section className={
           (
             (this.state.active["type"].toLowerCase() === p.particle.toLowerCase()) ||
-            (this.state.substance === "antimatter") ||
+            ((this.state.substance === "antimatter") && (p.particle.toLowerCase() !== "force-carrying particles")) ||
             (this.state.active["type"] == "Standard model of particle physics")
           ) ?
             "area-" + p.particle.split(' ').join('-') + " zone active" :
@@ -109,7 +109,6 @@ class App extends Component {
           <section className={
               (
                 (this.state.active["type"].toLowerCase() === "higgs boson") ||
-                (this.state.substance === "antimatter") ||
                 (this.state.active["type"] == "Standard model of particle physics")
               ) ?
               "area-higgs-boson zone active" :
@@ -118,7 +117,7 @@ class App extends Component {
             <div className="particle">
               <div className="particle-content">
                 <div className="symbol">H</div>
-                <div className="name">Higgs Boson</div>
+                <div className="name">Higgs boson</div>
               </div>
             </div>
           </section>

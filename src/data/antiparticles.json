@@ -3,27 +3,27 @@
         "particle": "quarks",
         "subtypes": [
             {
-                "name": "antiup",
+                "name": "up antiquark",
                 "symbol": "u"
             },
             {
-                "name": "anticharm",
+                "name": "charm antiquark",
                 "symbol": "c"
             },
             {
-                "name": "antitop",
+                "name": "top antiquark",
                 "symbol": "t"
             },
             {
-                "name": "antidown",
+                "name": "down antiquark",
                 "symbol": "d"
             },
             {
-                "name": "antistrange",
+                "name": "strange antiquark",
                 "symbol": "s"
             },
             {
-                "name": "antibottom",
+                "name": "bottom antiquark",
                 "symbol": "b"
             }
         ]

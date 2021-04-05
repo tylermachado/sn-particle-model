@@ -132,6 +132,7 @@ $lg-screen: 769px;
   align-items:center;
   border: 3px solid transparent;
   opacity: 0.375;
+  cursor: pointer;
 
   .particle-container {
       display: grid;
@@ -225,7 +226,7 @@ $lg-screen: 769px;
       font-weight: bold;
       display: initial;
       margin:0 auto;
-      width: 40%;
+      width: 33%;
 
       .area-neutrinos & {
         line-height: 90%;
