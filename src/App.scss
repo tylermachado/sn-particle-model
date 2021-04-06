@@ -285,7 +285,8 @@ $lg-screen: 769px;
       opacity: 1;
       padding: 0;
 
-      &.active, &:hover {
+      &.active, 
+      &:hover {
         opacity: 1;
       }
 
