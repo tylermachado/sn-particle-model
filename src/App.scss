@@ -134,6 +134,10 @@ $lg-screen: 769px;
   opacity: 0.375;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.725;
+  }
+
   .particle-container {
       display: grid;
       grid-template-rows: repeat(1, 15vw);
@@ -152,7 +156,11 @@ $lg-screen: 769px;
   }
 
   &.active {
-    opacity: 1;
+    opacity: 0.85;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   @media (min-width: $md-screen) {
@@ -277,12 +285,20 @@ $lg-screen: 769px;
       opacity: 1;
       padding: 0;
 
+      &.active, &:hover {
+        opacity: 1;
+      }
+
       .particle {
         background-color: rgb(240, 129, 109);
         border: 5px solid white;
         margin:0;
         width: 12vw;
         height: 12vw;
+
+        &:hover {
+          background-color: #e46a54;
+        }
       }
       
 
