@@ -11,7 +11,7 @@ class App extends Component {
     this.state = { 
       "active": {
         type: "Standard model of particle physics",
-        text: "Tap the colored sections for more on each particle type."
+        text: "Tap the colored sections for more on each particle type.<br/><br/>Tap the matter/antimatter switch to see matter's antimatter partners."
       },
       "substance": "matter"
     };
@@ -40,7 +40,7 @@ class App extends Component {
         substance: "matter",
         active: {
           type: "Standard model of particle physics",
-          text: "Tap the colored sections for more on each particle type."
+          text: "Tap the colored sections for more on each particle type.<br/><br/>Tap the matter/antimatter switch to see matter's antimatter partners."
         }
       })
     }
