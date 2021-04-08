@@ -32,7 +32,7 @@ class App extends Component {
         substance: "antimatter",
         active: {
           type: "Antimatter",
-          text: "Each type of matter particle has an antimatter partner. Antiparticles have the opposite electric charge, but are otherwise identical to their alter-egos. Physicists are still <a href='https://www.sciencenews.org/article/mounting-evidence-suggests-neutrinos-are-key-why-antimatter-is-rare'>trying to understand</a> why matter is more prevalent than antimatter. For example, negatively charged electrons are much more prevalent in our cosmos than their positively-charged antiparticle, positrons. Because neutrinos have no electric charge, scientists are puzzling over whether neutrinos and antineutrinos are <a href='https://www.sciencenews.org/article/quest-identify-nature-neutrinos-alter-ego-heating'>distinct particles</a>, or the same thing."
+          text: "Each type of matter particle has an antimatter partner. Antiparticles have the opposite electric charge, but are otherwise identical to their alter-egos. Physicists are still <a target='_blank' href='https://www.sciencenews.org/article/mounting-evidence-suggests-neutrinos-are-key-why-antimatter-is-rare'>trying to understand</a> why matter is more prevalent than antimatter. For example, negatively charged electrons are much more prevalent in our cosmos than their positively-charged antiparticle, positrons. Because neutrinos have no electric charge, scientists are puzzling over whether neutrinos and antineutrinos are <a target='_blank' href='https://www.sciencenews.org/article/quest-identify-nature-neutrinos-alter-ego-heating'>distinct particles</a>, or the same thing."
         }
       })
     } else {
