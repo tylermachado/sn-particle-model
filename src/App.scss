@@ -84,7 +84,7 @@ $lg-screen: 769px;
 
   @media (min-width: $md-screen) { 
     padding: 60px 20px 20px;
-    border: 1px solid black;
+    border: 1.5px solid black;
   }
 
   h3, p {
@@ -235,6 +235,12 @@ $lg-screen: 769px;
       display: initial;
       margin:0 auto;
       width: 33%;
+
+      .area-force-carrying-particles &,
+      .area-charged-leptons &,
+      .area-higgs-boson & {
+        width: 50%;
+      }
 
       .area-neutrinos & {
         line-height: 90%;

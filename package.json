@@ -2,7 +2,7 @@
   "name": "react-blank",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://tylermachado.github.io/sn-particle-model",
+  "homepage": "http://tylermachado.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
