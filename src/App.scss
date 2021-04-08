@@ -132,10 +132,17 @@ $lg-screen: 769px;
   align-items:center;
   border: 3px solid transparent;
   opacity: 0.375;
-  cursor: pointer;
 
+  .mode-matter & {
+    cursor: pointer;
+  }
+  
   &:hover {
     opacity: 0.725;
+
+    .mode-antimatter & {
+      opacity: 0.375;
+    }
   }
 
   .particle-container {
@@ -160,6 +167,10 @@ $lg-screen: 769px;
 
     &:hover {
       opacity: 1;
+
+      .mode-antimatter & {
+        opacity: 0.85;
+      }
     }
   }
 
@@ -292,8 +303,12 @@ $lg-screen: 769px;
       padding: 0;
 
       &.active, 
-      &:hover {
+      &:hover, {
         opacity: 1;
+
+        .mode-antimatter & {
+          opacity: 1;
+        }
       }
 
       .particle {
@@ -304,7 +319,10 @@ $lg-screen: 769px;
         height: 12vw;
 
         &:hover {
-          background-color: #e46a54;
+          .mode-matter & {
+            background-color: #e46a54;
+          }
+          
         }
       }
       
