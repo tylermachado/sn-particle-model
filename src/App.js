@@ -48,6 +48,8 @@ class App extends Component {
 
   render() {
     let particlesrendered;
+
+    // this if-else statement renders our different boxes depending whether we're looking at matter or antimatter particles
     if (this.state.substance === "matter") {
       particlesrendered = particles.default.map(p => (
         <section className={
@@ -99,7 +101,6 @@ class App extends Component {
     }
     return (
       <div className="App">
-        
         <div className={"grid-container mode-" + this.state.substance}>
           {particlesrendered}
           <section className="controller" onClick={() => this.changeMode()}>
