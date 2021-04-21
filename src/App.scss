@@ -295,54 +295,54 @@ $lg-screen: 769px;
 }
 
 .area-higgs-boson {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  opacity: 1;
+  padding: 0;
+
+  &.active, 
+  &:hover {
+    opacity: 1;
+
+    .mode-antimatter & {
       opacity: 1;
-      padding: 0;
+    }
+  }
 
-      &.active, 
-      &:hover, {
-        opacity: 1;
+  .particle {
+    background-color: rgb(240, 129, 109);
+    border: 5px solid white;
+    margin:0;
+    width: 12vw;
+    height: 12vw;
 
-        .mode-antimatter & {
-          opacity: 1;
-        }
+    &:hover {
+      .mode-matter & {
+        background-color: #e46a54;
       }
-
-      .particle {
-        background-color: rgb(240, 129, 109);
-        border: 5px solid white;
-        margin:0;
-        width: 12vw;
-        height: 12vw;
-
-        &:hover {
-          .mode-matter & {
-            background-color: #e46a54;
-          }
-          
-        }
-      }
+    }
+  }
       
 
-      &:not(.active) .particle .particle-content {
-        opacity: 0.4;
-      }
+  &:not(.active) .particle .particle-content {
+    opacity: 0.4;
+  }
 
-    @media (min-width: $md-screen) {
-      position: absolute;
-      top: calc(50% - 6vw - 5px);
-      left: calc(50% - 6vw - 5px);
-      background-color: unset;
-    }
+  @media (min-width: $md-screen) {
+    position: absolute;
+    top: calc(50% - 6vw - 5px);
+    left: calc(50% - 6vw - 5px);
+    background-color: unset;
+  }
+}
 
-      
-    }
 
+
+
+// fallback grid styles for older browsers
 @media all and (-ms-high-contrast:none) {
-
   .zone {
   display: -ms-grid;
   -ms-grid-columns: repeat(3, 1fr);
