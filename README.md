@@ -2,6 +2,10 @@
 
 This interactive was built by Tyler Machado on behalf of Science News. It outputs an interactive version of the standard model of particle physics, using the React.js framework. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## A note on deployment
+
+The _homepage_ property in package.json MUST match the path of the hosting folder in which the interactive will live; this ensures that the paths to the JavaScript and style files still work in production the way they do locally.
+
 ## Folders
 
 ### build
